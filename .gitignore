@@ -15,9 +15,6 @@
 /log/*.log
 /tmp
 
-#Ignore secret keys
-/config/secrets.yml
-
 #ignore other unneeded files.
 database.yml
 doc/
