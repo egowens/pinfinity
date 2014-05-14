@@ -6,4 +6,5 @@ share them with friends and collueges. It will be using a LaTex type equation ed
 to make your equations easy to enter and beautiful to view.
 
 Checkout the current status here [Pinfinity](http://pinfinity.herokuapp.com)
-by [Eric Gowens](http://ericgowens.com).
+
+<small>by [Eric Gowens](http://ericgowens.com).</small>
