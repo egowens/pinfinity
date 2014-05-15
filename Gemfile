@@ -22,6 +22,9 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'spring',        group: :development
 
+#Authentication using devise
+gem 'devise'
+
 group :doc do
 gem 'sdoc', '~> 0.4.0', require: false
 end
