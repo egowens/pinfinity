@@ -4,7 +4,10 @@ Rails.application.routes.draw do
   root to: 'static_pages#home'
 
   #Devise
-  devise_for :users, :path => ''
+  devise_for :users, :path => '', :path_names => {
+    :sign_in => 'signin',
+    :sign_out => 'signout',
+  }
 
   #Static Pages
   get '/help',    to: 'static_pages#help'
