@@ -28,3 +28,33 @@
     color: #468847;
     text-align: left;
  }
+
+/*authentication pages*/
+.well h2 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+#user_email {
+  margin-bottom: 10px;
+}
+
+#user_password {
+  margin-bottom: 10px;
+}
+
+#user_password_confirmation {
+  margin-bottom: 10px;
+}
+
+#user_current_password {
+  margin-bottom: 10px;
+}
+
+#user_remember_me {
+  margin-bottom: 15px;
+}
+
+input.btn.btn-lg.btn-primary {
+  margin-bottom: 10px;
+}
