@@ -1,14 +1,14 @@
 <% provide(:title, 'Sign In') %>
 <div class="container">
   <div class="row">
-    <div class="col col-sm-10 col-sm-offset-1">
+    <div class="col col-sm-6 col-sm-offset-3">
       <%= devise_error_messages! %>
       <div class="well">
         <h2>Sign In</h2>
 
         <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-          <div><%= f.label :email %><br />
-          <%= f.email_field :email, class: "form-control", autofocus: true %></div>
+          <div><%= f.label :login %><br />
+          <%= f.text_field :login, class: "form-control", autofocus: true %></div>
 
           <div><%= f.label :password %><br />
             <%= f.password_field :password, class: "form-control", autocomplete: "off" %></div>

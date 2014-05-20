@@ -1,15 +1,18 @@
-<% provide(:title, 'Forgot Password') %>
+<% provide(:title, 'Sign Up') %>
 <div class="container">
   <div class="row">
-    <div class="col col-sm-10 col-sm-offset-1">
+    <div class="col col-sm-6 col-sm-offset-3">
     <%= devise_error_messages! %>
       <div class="well">
           <h2>Sign Up Now! </h2>
 
         <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
 
+          <div><%= f.label :username %><br />
+          <%= f.text_field :username, class: "form-control", autofoxus: true %></div>
+
           <div><%= f.label :email %><br />
-          <%= f.email_field :email, class: "form-control", autofocus: true %></div>
+          <%= f.email_field :email, class: "form-control" %></div>
 
           <div><%= f.label :password %><br />
             <%= f.password_field :password, class: "form-control", autocomplete: "off" %></div>
