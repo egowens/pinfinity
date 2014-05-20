@@ -31,9 +31,10 @@ describe "AuthenticationPages" do
 
     describe "with valid information" do
       before do
-        fill_in "user_email",                  with:   "tester@example.com"
-        fill_in "user_password",               with:   "foobarbaz"
-        fill_in "user_password_confirmation",  with:   "foobarbaz"
+        fill_in "user_username",                     with:   "Tester"
+        fill_in "user_email",                   with:   "tester@example.com"
+        fill_in "user_password",                with:   "foobarbaz"
+        fill_in "user_password_confirmation",   with:   "foobarbaz"
         click_button "Sign up"
       end
 
@@ -49,21 +50,37 @@ describe "AuthenticationPages" do
     describe "with invalid information" do
       before { click_button "Sign in" }
 
-      it { should have_content("Invalid email or password") }
+      it { should have_content("Invalid login or password") }
       it { should have_selector("div.alert.alert-alert") }
     end
 
-    describe "with valid information" do
+    describe "with valid email" do
       let(:user) { FactoryGirl.create(:user) }
 
       before do
-        fill_in "user_email",     with: user.email
+        fill_in "user_login",     with: user.email
         fill_in "user_password",  with: user.password
         click_button "Sign in"
       end
 
       it { should have_content("Signed in successfully") }
       it { should have_selector("div.alert.alert-notice") }
+      it { should have_content(user.username) }
+      it { should_not have_content("Sign in") }
+    end
+
+    describe "with valid username" do
+      let(:user) { FactoryGirl.create(:user) }
+
+      before do
+        fill_in "user_login",     with: user.username
+        fill_in "user_password",  with: user.password
+        click_button "Sign in"
+      end
+
+      it { should have_content("Signed in successfully") }
+      it { should have_selector("div.alert.alert-notice") }
+      it { should have_content(user.username) }
       it { should_not have_content("Sign in") }
     end
   end
@@ -72,7 +89,7 @@ describe "AuthenticationPages" do
     before do
       visit '/signin'
       user = FactoryGirl.create(:user)
-      fill_in "user_email",     with: user.email
+      fill_in "user_login",     with: user.email
       fill_in "user_password",  with: user.password
       click_button "Sign in"
       click_link "Sign out"
