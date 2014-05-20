@@ -9,4 +9,10 @@ describe "AuthenticationPages" do
     it { should have_content('Sign Up Now!') }
     it { should have_title('Sign Up') }
   end
+
+  describe "signin page" do
+    before { visit '/signin' }
+    it { should have_content('Sign In') }
+    it { should have_title('Sign In') }
+  end
 end
