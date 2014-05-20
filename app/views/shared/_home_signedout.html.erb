@@ -1,11 +1,20 @@
 <div class="container">
   <div class="row">
     <div class="col col-sm-10 col-sm-offset-1">
-      <div class="jumbotron">
+      <div class="jumbotron", id="homepage_jumbotron">
         <h1>Pinfinity</h1>
         <h3>Pin your Equations!</h3>
+        <div class="col col-md-8 col-md-offset-2">
+          <div class="well", id="homepage_well">
+            <p>\[\int_a^b f(x) dx=F(b)-F(a)\]</p>
+          </div>
+        </div><br />
         <%= link_to "Sign up now!", '/sign_up', class: "btn btn-primary btn-lg" %>
       </div>
     </div>
   </div>
 </div>
+
+<%= javascript_tag do %>
+  MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+<% end %>
