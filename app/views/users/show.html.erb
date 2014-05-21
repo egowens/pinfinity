@@ -1,0 +1,33 @@
+<% provide(:title, @user.username)%>
+<div class="container">
+  <div class="row">
+    <div class="col col-sm-4">
+      <div class="well">
+        <h1>
+          <%= gravatar_for @user %>
+          <%= @user.username %>
+        </h1>
+        <h2>
+          <%= @user.pins.count %> Pinned Equations
+        </h2>
+      </div>
+    </div>
+    <div class = "col col-sm-8">
+      <div class="well">
+        <% if @user.pins.any? %>
+          <h3><%= @user.pins.count %> Pinned Equations</h3>
+          <ol class="pins">
+            <%= render @pins %>
+          </ol>
+        <% else %>
+          <h3>No Equations Yet</h3>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<%= javascript_tag do %>
+  MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+<% end %>
