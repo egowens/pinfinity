@@ -5,4 +5,10 @@ FactoryGirl.define do
     password                "foobarbaz"
     password_confirmation   "foobarbaz"
   end
+
+  factory :pin do
+    equation                "x\; =\; \frac {-b\; \pm\; \sqrt {b^2\; -\; 4ac}}{2a}"
+    description             "The quadratic formula"
+    user
+  end
 end
