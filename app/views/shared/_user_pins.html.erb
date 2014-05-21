@@ -6,3 +6,7 @@
 <% else %>
   <h3>No Equations Yet</h3>
 <% end %>
+
+<%= javascript_tag do %>
+  MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+<% end %>
