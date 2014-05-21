@@ -1,0 +1,8 @@
+<% if current_user.pins.any? %>
+  <h3><%= current_user.pins.count %> Pinned Equations</h3>
+  <ol class="pins">
+    <%= render @pins %>
+  </ol>
+<% else %>
+  <h3>No Equations Yet</h3>
+<% end %>
