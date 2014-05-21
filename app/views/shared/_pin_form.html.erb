@@ -1,0 +1,10 @@
+<%= form_for(@pin) do |f| %>
+  <div class="field">
+    <%= f.text_area :equation, :rows=>"3", placeholder: "Equation..." %>
+  </div>
+  <div class="field">
+    <%= f.text_area :description, :rows=>"4", placeholder: "Description..." %>
+  </div>
+
+  <div><%= f.submit "Pin it!", class: "btn btn-lg btn-primary" %></div>
+<% end %>
