@@ -29,6 +29,7 @@
     text-align: left;
  }
 
+
 /*Home Page*/
 #homepage_jumbotron h3{
   text-align: center;
@@ -36,8 +37,10 @@
 
 #homepage_well.well {
   background-color: #fff;
+  font-size: 50px;
   margin-bottom: 10px;
 }
+
 
 /*authentication pages*/
 .well h2 {
@@ -66,5 +69,17 @@
 }
 
 input.btn.btn-lg.btn-primary {
+  margin-bottom: 10px;
+}
+
+
+/*Pin creator*/
+#pin_equation {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+#pin_description {
+  width: 100%;
   margin-bottom: 10px;
 }

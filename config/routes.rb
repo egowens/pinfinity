@@ -13,6 +13,13 @@ Rails.application.routes.draw do
   get '/help',    to: 'static_pages#help'
   get '/about',   to: 'static_pages#about'
 
+  #User pages
+  get 'users'     =>  'users#index', :as => :users
+  get 'users/:id' =>  'users#show', :as => :user
+
+  #Pins
+  resources :pins, only: [:create, :edit, :destroy]
+
   #mathjax
   mathjax 'mathjax'
 

@@ -1,0 +1,10 @@
+<li>
+<div class="well">
+  <p><%= pin.equation %></p>
+</div>
+  <span class="description"><%= pin.description %></span>
+  <span class="timestamp">
+    Posted <%= time_ago_in_words(pin.created_at) %> ago.
+  </span>
+</li>
+
