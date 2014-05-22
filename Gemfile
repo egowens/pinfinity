@@ -29,6 +29,7 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'will_paginate'
+gem 'masonry-rails'
 gem 'mathjax-rails'
 gem 'spring',        group: :development
 
