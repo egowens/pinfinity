@@ -9,6 +9,7 @@ class PinsController < ApplicationController
       flash[:success] = "Equation pinned!"
       redirect_to root_url
     else
+      @pin_items = current_user.pin_feed
       render 'static_pages/home'
     end
   end
@@ -17,6 +18,8 @@ class PinsController < ApplicationController
   end
 
   def destroy
+    @pin.destroy
+    redirect_to root_url
   end
 
   private

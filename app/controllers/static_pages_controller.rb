@@ -1,7 +1,9 @@
 class StaticPagesController < ApplicationController
   def home
-    @pin = current_user.pins.build if user_signed_in?
-    @pins = current_user.pins if user_signed_in?
+    if user_signed_in?
+      @pins = current_user.pins
+      @feed_items = current_user.pin_feed
+    end
   end
 
   def help

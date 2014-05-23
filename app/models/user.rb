@@ -18,4 +18,7 @@ class User < ActiveRecord::Base
     end
   end
 
+  def pin_feed
+    Pin.where("user_id = ?", id)
+  end
 end

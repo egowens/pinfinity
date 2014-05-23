@@ -1,8 +1,8 @@
-<% if current_user.pins.any? %>
-  <h3><%= current_user.pins.count %> Pinned Equations</h3>
-  <ol class="pins">
-    <%= render @pins %>
-  </ol>
+<% if @feed_items.any? %>
+  <h3><%= pluralize(@feed_items.count, "Pinned Equation") %> </h3>
+  <div class="transitions-enabled" id="masonry-container">
+    <%= render partial: 'shared/feed_item', collection: @feed_items %>
+  </div>
 <% else %>
   <h3>No Equations Yet</h3>
 <% end %>
