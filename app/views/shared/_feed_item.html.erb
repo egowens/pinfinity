@@ -1,9 +1,11 @@
-<div class="box col4" id="<%= feed_item.id %>" >
-  <div class="well">
-    <p>$<%= feed_item.equation %>$</p>
+<div class="pin">
+  <div class="well" id="pin-box" >
+    <div class="well" id="equation-well">
+      <p id="pinned-equation">$<%= feed_item.equation %>$</p>
+    </div>
+    <div class="description" id="pin-description"><%= feed_item.description %></div>
+    <div class="timestamp" id="pin-timestamp">
+      Posted: <%= feed_item.created_at %>.
+    </div>
   </div>
-  <span class="description"><%= feed_item.description %></span><br />
-  <span class="timestamp">
-    Posted: <%= feed_item.created_at %>.
-  </span>
 </div>

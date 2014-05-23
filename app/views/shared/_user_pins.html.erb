@@ -1,6 +1,6 @@
 <% if @feed_items.any? %>
-  <h3><%= pluralize(@feed_items.count, "Pinned Equation") %> </h3>
-  <div class="transitions-enabled" id="masonry-container">
+  <h3>Your <%= pluralize(@feed_items.count, "Pinned Equation") %> </h3>
+  <div class="row" id="pin-row">
     <%= render partial: 'shared/feed_item', collection: @feed_items %>
   </div>
 <% else %>

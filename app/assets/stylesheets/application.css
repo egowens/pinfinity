@@ -12,7 +12,5 @@
  *
  *= require_tree .
  *= require bootstrap
- *= require 'masonry/basic'
- *= require 'masonry/transitions'
  *= require_self
  */
