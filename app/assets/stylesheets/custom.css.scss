@@ -93,6 +93,8 @@ input.btn.btn-lg.btn-primary {
 
 
 /*Pinned Equations*/
+*, *:before, *:after {box-sizing: border-box !important;}
+
 #pin-row {
   -moz-column-width: 18em;
   -webkit-column-width: 18em;
