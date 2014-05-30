@@ -1,5 +1,5 @@
 <% if @feed_items.any? %>
-  <h3>Your <%= pluralize(@feed_items.count, "Pinned Equation") %> </h3>
+  <h2>Your <%= pluralize(@feed_items.count, "Pinned Equation") %> </h2>
   <div class="row" id="pin-row">
     <%= render partial: 'shared/feed_item', collection: @feed_items %>
   </div>

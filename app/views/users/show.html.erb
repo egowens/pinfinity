@@ -1,28 +1,26 @@
 <% provide(:title, @user.username)%>
-<div class="container">
+<div class="container-fluid">
   <div class="row">
     <div class="col col-sm-4">
-      <div class="well">
+      <div class="well" id="user-pin-form">
         <h1>
           <%= gravatar_for @user %>
           <%= @user.username %>
         </h1>
         <h2>
-          <%= @user.pins.count %> Pinned Equations
+          <%= pluralize(@user.pins.count, "Equations") %>
         </h2>
       </div>
     </div>
     <div class = "col col-sm-8">
-      <div class="well">
-        <% if @user.pins.any? %>
-          <h3><%= @user.pins.count %> Pinned Equations</h3>
-          <ol class="pins">
-            <%= render @pins %>
-          </ol>
-        <% else %>
-          <h3>No Equations Yet</h3>
-        <% end %>
-      </div>
+      <% if @user.pins.any? %>
+        <h2><%= pluralize(@user.pins.count, "Pinned Equation") %></h2>
+        <div class="row" id="pin-row">
+          <%= render @pins %>
+        </div>
+      <% else %>
+        <h2>No Equations Yet</h2>
+      <% end %>
     </div>
   </div>
 </div>

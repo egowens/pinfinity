@@ -1,9 +1,11 @@
-<li id="<%= pin.id %>">
-  <div class="well">
-    <p>$<%= pin.equation %>$</p>
+<div class="pin">
+  <div class="well" id="pin-box">
+    <div class="well" id="equation-well">
+      <p id="pinned-equation">$<%= pin.equation %>$</p>
+    </div>
+    <div class="description" id="pin-description"><%= pin.description %></div>
+    <div class="timestamp" id="pin-timestamp">
+      Posted: <%= pin.created_at %>.
+    </div>
   </div>
-  <span class="description"><%= pin.description %></span><br />
-  <span class="timestamp">
-    Posted: <%= pin.created_at %>.
-  </span>
-</li>
+</div>
