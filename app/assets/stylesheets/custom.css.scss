@@ -169,7 +169,12 @@ input.btn.btn-lg.btn-primary {
 
 /*Footer*/
 footer {
+  display: inline-block;
   margin-top: 50px;
   border-top: 1px solid #aaa;
   color: #333;
+}
+
+#paypal-button {
+  float: right;
 }
